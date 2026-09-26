@@ -9,9 +9,12 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Nemo.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Nemo" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="147ECDE5-79C9-413B-BB8D-12269661F4D9" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titel" tags="" position="925,325" size="100,100">(text-size: 6)+(align: &quot;=&gt;&lt;=&quot;)+ (box: &quot;X&quot;)[nemo]
-(align: &quot;=&gt;&lt;=&quot;)[Eine Reise zum einsamsten Ort der Erde]
-(align: &quot;=&gt;&lt;=&quot;)+ (text-color:&quot;blue&quot;)[[Starten]]</tw-passagedata><tw-passagedata pid="2" name="Starten" tags="" position="1050,450" size="100,100">[nemo]</tw-passagedata></tw-storydata>
+<tw-storydata name="Nemo" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="147ECDE5-79C9-413B-BB8D-12269661F4D9" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Titel" tags="" position="925,325" size="100,100">(align: &quot;=&gt;&lt;=&quot;)+(box: &quot;X&quot;)+(text-size: 4.0)[nemo
+(text-size: 0.6)+(text-style: &quot;italic&quot;)+(text-color: &quot;#708090&quot;)[(lat.): Niemand.]]
+(align: &quot;=&gt;&lt;=&quot;)+(text-color: &quot;blue&quot;)[[Starten]]</tw-passagedata><tw-passagedata pid="2" name="Starten" tags="" position="1050,450" size="100,100">(transition: &quot;dissolve&quot;)+(transition-time: 10s)+(align: &quot;=&gt;&lt;=&quot;)+(box: &quot;X&quot;)[„Das ewige Schweigen dieser unendlichen Räume erschreckt mich.“
+- Blaise Pascal]
+
+(event: when time &gt; 10s)[(transition: &quot;dissolve&quot;)+(transition-time: 2s)+(align: &quot;=&gt;&lt;=&quot;)[(link: &quot;Weiter&quot;)[(go-to: &quot;Wartezimmer&quot;)]]]</tw-passagedata><tw-passagedata pid="3" name="Wartezimmer" tags="" position="1050,575" size="100,100">[hier gehts weiter]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
