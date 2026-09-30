@@ -26,7 +26,36 @@ Irgendwie ironisch, dass die Forelle wohl länger unter den Piranhas überlebt h
 
 |block3)[(transition:&quot;dissolve&quot;)[[[Weiter -&gt; Wartezimmer Teil 2]]]]
 
-(click: ?page)[(show: ?block1)]</tw-passagedata><tw-passagedata pid="4" name=" Wartezimmer Teil 2" tags="" position="1050,700" size="100,100"></tw-passagedata></tw-storydata>
+(click: ?page)[(show: ?block1)]</tw-passagedata><tw-passagedata pid="4" name=" Wartezimmer Teil 2" tags="" position="1050,700" size="100,100">Du gehörst zur 12. Einheit der &quot;Tiefseefriedenstruppe&quot; und eure Aufgabe ist es, sensible Daten eines abgestürzten Satelliten zu finden und zu bergen. Jener Satellit ist, wie so viele vor ihm, kontrolliert über dem sogenannten &quot;Point Nemo&quot; abgestürzt - dem Punkt auf der Erde, der am weitesten von jeglicher Zivilisation entfernt ist. 
+
+|block1)[(transition:&quot;dissolve&quot;)[Es sollte eine schlichte Bergungsmission werden, doch das erste Späherteam fand noch etwas ganz anderes am Grund des Ozeans: eine verlassene, riesige Stadt. Eine verlassene, riesige Stadt in 4000 Metern Tiefe. Man kann sich vorstellen, was das für eine Sensation war - fast einen Monat schrieben die Zeitungen über nichts anderes mehr. ](click: ?page)[(show: ?block2)]]
+
+|block2)[(transition:&quot;dissolve&quot;)[&quot;Atlantis endlich gefunden?!&quot;, &quot;Geheimbasis aus Weltkrieg&quot;, &quot;Größte Entdeckung seit der Erschließung Amerikas!&quot; - es hörte einfach nicht auf, aber wie konnte es auch? Das Wissen, dass es seit  vielen Tausend Jahren  eine große Stadt am scheinbar einsamsten Ort der Welt gibt, erschütterte das Weltbild von vielen. Neue Verschwörungstheorien entstanden, Nationen beanspruchten den Ort für sich und viele wussten nicht mehr, was sie überhaupt glauben sollten. ](click: ?page)[(show: ?block3)]]
+
+|block3)[(transition:&quot;dissolve&quot;)[&quot;Wächter 43, machen Sie sich bereit! In 5 Minuten geht es los.&quot;, dröhnt es aus einem Lautsprecher. Du bist gemeint. Dein nächster Tauchgang steht bevor.](click: ?page)[(show: ?block4)]]
+
+|block4)[(transition:&quot;dissolve&quot;)[[[Steh auf -&gt; Wartezimmer Teil 3]]]]
+
+(click: ?page)[(show: ?block1)]</tw-passagedata><tw-passagedata pid="5" name=" Wartezimmer Teil 3" tags="" position="1050,825" size="100,100">Du atmest tief ein und stehst auf - so ganz geht die Aufregung wohl nie weg.
+
+Dein Spind mit der Nummer 86 sieht in diesem Licht der Abendsonne noch knallroter aus, als er es eigentlich ist. Nummer 86, wie die Hausnummer eurer ersten gemeinsamen Wohnung. Quietschend öffnest du die Tür deines Spinds und nimmst deine Ausrüstung hinaus.
+
+(link: &quot;Das Foto anschauen&quot;)[(transition: &quot;dissolve&quot;)[Zwischen deinen Dienstplan und ein Notizheft geklemmt, hinten am Ende des Spinds, ist ein kleines Foto von deinen Kindern, deinem Partner und dir. Du blickst auf das Datum: 24.12.2156 - Heiligabend vor 2 Jahren. Deine Kleinste lacht, weil ihre große Schwester eine Grimasse zieht. Dein Partner blickt die beiden ernst an, schließlich sollte es ein Foto für die Großeltern werden. &quot;Doch mit so schönen Augen kann man gar nicht finster blicken.&quot;, denkst du dir und streichelst über das Bild, wie du es immer vor deinen Einsätzen tust. Dein Herz schlägt gegen deine Brust, ein warmes und gleichmäßiges Pochen, ein Versprechen: Du wirst zurückkommen.](show: ?schluss)]
+
+(link: &quot;Den Spind schließen&quot;)[(transition: &quot;dissolve&quot;)[Du schließt den Spind, ziehst deine Ausrüstung an und stapfst Richtung Teleporter.
+&quot;Guten Abend Wächter Nummer 43.&quot;, ertönt aus einem Monitor, der neben der Telekapsel an der Wand hängt. Die Standard-Prozedur beginnt.](show: ?schluss)]
+
+|schluss)[(transition: &quot;dissolve&quot;)[(link: &quot;Zuhören!&quot;)[(go-to: &quot;Befragung 1&quot;)]]]</tw-passagedata><tw-passagedata pid="6" name="Befragung 1" tags="" position="1050,950" size="100,100">(align: &quot;=&gt;&lt;=&quot;)[„Ist Ihnen bewusst, dass Sie mit Ihrem Einsatz über den Erfolg oder über den Misserfolg unserer ganzen Nation entscheiden könnten?“]
+
+(link: &quot;Jawohl!&quot;)[(go-to: &quot;Befragung 2&quot;)]
+
+(link: &quot;Nein&quot;)[(set: $rückkehr to &quot;Befragung 1&quot;)(go-to: &quot;NEIN&quot;)]</tw-passagedata><tw-passagedata pid="7" name="NEIN" tags="" position="900,1025" size="100,100">(align: &quot;=&gt;&lt;=&quot;)+(text-size: 5.0)+(text-color: &quot;red&quot;)+(text-style: &quot;bold&quot;)[FEHLER]
+
+(after: 2s)[(go-to: $rückkehr)]</tw-passagedata><tw-passagedata pid="8" name="Befragung 2" tags="" position="1050,1100" size="100,100">(align: &quot;=&gt;&lt;=&quot;)[„“]
+
+(link: &quot;Jawohl!&quot;)[(go-to: &quot;Befragung 3&quot;)]
+
+(link: &quot;Nein&quot;)[(set: $rückkehr to &quot;Befragung 2&quot;)(go-to: &quot;NEIN&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
